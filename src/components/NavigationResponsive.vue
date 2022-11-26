@@ -12,12 +12,12 @@
           <li class="link">Portfolio</li>
         </ul>
         <div
-          class="icon far fa-bars"
+          class="icon"
           v-on:click="toggleMobileNav"
           v-show="mobile"
           v-bind:class="{ 'icon-active': mobileNav }"
         ></div>
-        <transition name="mobile-app">
+        <transition name="mobile-nav">
           <ul class="dropdown-nav" v-show="mobileNav">
             <li class="link">Home</li>
             <li>About</li>
@@ -112,7 +112,7 @@ li:hover {
   align-items: center;
 }
 .icon-active {
-  transform: rotate(180deg);
+  transform: rotate(1turn);
 }
 .branding {
   display: flex;
@@ -125,16 +125,28 @@ li:hover {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  align-content: space-around;
   position: absolute;
   width: 120px;
   height: 100vh;
   background-color: white;
-
   top: 0;
   left: 0;
   padding: 10px 0 0 20px;
   li {
     color: black;
   }
+}
+.mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  transition: 1s ease all;
+}
+.mobile-nav-enter-from,
+.mobile-nav-enter-to {
+  transform: translate(-250px);
+}
+.mobile-nav-enter-to {
+  transform: translate(0);
 }
 </style>

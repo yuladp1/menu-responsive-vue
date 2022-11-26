@@ -25,7 +25,7 @@ export default {
   data() {},
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +34,7 @@ export default {
   color: #2c3e50;
   width: 100vw;
   margin: 0;
+  min-width: 320px;
 }
 body {
   box-sizing: border-box;
@@ -53,9 +54,6 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 .hero {
   background-image: url("./assets/hero-bg.png");
   background-attachment: fixed;
